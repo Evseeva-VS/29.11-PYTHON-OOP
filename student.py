@@ -35,7 +35,7 @@ class Student(object):
         except:
             self.grades[subject] = [_grade]
 
-    # Сравнение студентов по курса
+    # Сравнение студентов по курсу
     def curs_comparison(self, instance):
         print(instance)
         if (self.curs > instance.curs):
