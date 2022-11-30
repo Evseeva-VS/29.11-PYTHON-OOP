@@ -24,7 +24,19 @@ class Student(object):
         if (self.curs == 5): return
         self.curs += 1
 
-student = Student('','',0,'','',5)
-print(student.curs)
-student.go_to_next_curs()
-print(student.curs)
+    # Добавление оценок
+    def add_grade(self, grade):
+        # Разбираем словарь на предмет и оценку
+        subject, _grade = list(grade.items())[0]
+        # Если предмет уже существует - добавляем оценку в список
+        try:
+            self.grades[subject].append(_grade)
+        # Иначе создаём ключ в словаре и добавляем оценку
+        except:
+            self.grades[subject] = [_grade]
+
+# Проверка
+student = Student('','',0,'','',2)
+student.add_grade({'math': 5})
+student.add_grade({'math': 3})
+print(student.grades)
