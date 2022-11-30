@@ -35,8 +35,12 @@ class Student(object):
         except:
             self.grades[subject] = [_grade]
 
-# Проверка
-student = Student('','',0,'','',2)
-student.add_grade({'math': 5})
-student.add_grade({'math': 3})
-print(student.grades)
+    # Сравнение студентов по курса
+    def curs_comparison(self, instance):
+        print(instance)
+        if (self.curs > instance.curs):
+            return f'Студент {self.fio} старше {instance.fio} по курсу на {self.curs - instance.curs} год/лет'
+        elif (self.curs < instance.curs):
+            return f'Студент {instance.fio} старше {self.fio} по курсу на {instance.curs - self.curs} год/лет'
+        else:
+            return f'Студенты {self.fio} и {instance.fio} на одном курсе'
