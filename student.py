@@ -37,7 +37,6 @@ class Student(object):
 
     # Сравнение студентов по курсу
     def curs_comparison(self, instance):
-        print(instance)
         if (self.curs > instance.curs):
             return f'Студент {self.fio} старше {instance.fio} по курсу на {self.curs - instance.curs} год/лет'
         elif (self.curs < instance.curs):

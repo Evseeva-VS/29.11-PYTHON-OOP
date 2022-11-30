@@ -26,3 +26,7 @@ class Group(object):
             return f'В группе {instance.name}-{instance.number} больше студентов чем в группе {self.name}-{self.number} на {len(instance.students) - len(self.students)}'
         else:
             return f'В группах одинаковое количество студентов'
+
+    # Добавление студента в группу
+    def add_student(self, student):
+        self.students.append(student)

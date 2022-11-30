@@ -5,4 +5,7 @@ from group import Group
 student1 = Student('Васильков Николай Александрович', 'Мужской', 17, '','', 1)
 student2 = Student('Пешкова Наталия Анатольевна', 'Женский', 18, '', '', 1)
 group = Group('СА', 112, [student1, student2])
-print(group.get_by_gender('Мужской'))
+group2 = Group('ИСП', 139, [student1])
+print(group2)
+group2.add_student(student2)
+print(group2)
