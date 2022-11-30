@@ -30,3 +30,8 @@ class Group(object):
     # Добавление студента в группу
     def add_student(self, student):
         self.students.append(student)
+    
+    # Удалить студента из группы
+    def remove_student(self, student):
+        index = self.students.index(student)
+        del self.students[index]
